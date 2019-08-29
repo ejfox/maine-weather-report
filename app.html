@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+<head>
+  {{ HEAD }}
+  <link rel="stylesheet" href="/tachyons.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6731296/6385612/css/fonts.css" />
+
+</head>
+
+<body {{ BODY_ATTRS }}>
+  {{ APP }}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-319549-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-319549-1');
+</script> -->
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+</body>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<style media="screen">
+</style>
+
+</html>
