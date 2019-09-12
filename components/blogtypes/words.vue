@@ -2,7 +2,7 @@
   <div class="">
     <div
       v-if="bodyHtml"
-      class="words contentWrapper content" v-html="bodyHtml">
+      class="words contentWrapper content measure" v-html="bodyHtml">
     </div>
 
     <div
@@ -20,7 +20,7 @@
 import cheerio from 'cheerio'
 import URL from 'url-parse'
 // import _ from 'lodash'
-// import marked from 'marked'
+import marked from 'marked'
 import truncate from 'truncate'
 import slugify from 'slugify'
 export default {
@@ -37,7 +37,8 @@ export default {
   },
   created: function () {
     const parsedMarkdown = this.parseMarkdown(this.bodyMarkdown)
-    this.bodyHtml = this.processMarkdownHtml(parsedMarkdown)
+    // this.bodyHtml = this.processMarkdownHtml(parsedMarkdown)
+    this.bodyHtml = parsedMarkdown
   },
   methods: {
     processMarkdownHtml: function(markdownHtml) {
@@ -157,31 +158,31 @@ export default {
   parseMarkdown: function(markdown) {
     // console.log('Parsing markdown...')
     // Build markdown parser
-    // const markdownRenderer = marked.setOptions({
-    //   renderer: new marked.Renderer(),
-    //   // highlight: function (code) {
-    //   //   return require('highlight.js').highlightAuto(code).value
-    //   // }
-    //   pedantic: false,
-    //   gfm: true,
-    //   tables: true,
-    //   breaks: false,
-    //   sanitize: false,
-    //   smartLists: true,
-    //   smartypants: true,
-    //   xhtml: true
-    // })
-    // return markdownRenderer(markdown)
+    const markdownRenderer = marked.setOptions({
+      renderer: new marked.Renderer(),
+      // highlight: function (code) {
+      //   return require('highlight.js').highlightAuto(code).value
+      // }
+      pedantic: false,
+      gfm: true,
+      tables: true,
+      breaks: false,
+      sanitize: false,
+      smartLists: true,
+      smartypants: true,
+      xhtml: true
+    })
+    return markdownRenderer(markdown)
 
     // console.log('markdown-it-footnote', require('markdown-it-footnote'))
 
     // console.log('markdown-it-anchor', require('markdown-it-anchor').default)
 
-    const MarkdownIt = require('markdown-it')({
-      html: true,
-      breaks: true,
-      typographer: true
-    })
+    // const MarkdownIt = require('markdown-it')({
+    //   html: true,
+    //   breaks: true,
+    //   typographer: true
+    // })
     // .use(require('markdown-it-footnote'))
     //.use(require('../../helpers/footnote.js'))
     // .use(require('markdown-it-table-of-contents'), {

@@ -99,13 +99,17 @@ pre {
 }
 
 .sans-serif {
-  font-family: "Idlewild A", "Idlewild B";
+  /* font-display: fallback; */
+  font-display: none;
+  font-family: "Idlewild A", "Idlewild B", "Helvetica Neue", Helvetica,sans-serif;
   font-style: normal;
   font-weight: 800;
 }
 
 .serif {
-  font-family: "Quarto A", "Quarto B";
+  /* font-display: fallback; */
+  font-display: none;
+  font-family: "Quarto A", "Quarto B", "Georgia", serif;
 }
 
 </style>

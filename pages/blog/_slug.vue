@@ -1,10 +1,10 @@
 <template>
-<div class="slug-container cf">
+<div class="slug-container cf pa5-l">
   <article id="post-container w-100 fl">
     <!-- Article header -->
     <header class="ph3-ns w-100">
       <div class="ph2 ph3-ns">
-        <h1 :class="['f-headline sans-serif-flyweight lh-solid mv0 mv1-ns', (type === 'photos') || (type === 'audio') ? 'tc' : '']">
+        <h1 :class="['f-subheadline sans-serif-flyweight lh-solid mv0 mv1-ns', (type === 'photos') || (type === 'audio') ? 'tc' : '']">
           {{ title }}
         </h1>
       </div>
@@ -15,34 +15,14 @@
 
       <!-- Timestamp -->
       <time v-if="!hidetimestamp"
-        :class="['f3 w-100 sans-serif mb2 pl0 pb0 db ttu tracked o-50']">
+        :class="['f4 w-100 sans-serif mb2 pl0 pb0 db ttu tracked o-50']">
         <small class="mv3 pa3-ns tc tl-ns w-100 db">{{ date | moment("MMMM Do, YYYY") }}</small>
       </time>
     </header>
-    <!-- Non-audio blog post types -->
+
     <section
-    v-if="type !== 'audio'"
-    :class="['w-100  not-audio mb0 pa1 pa3-ns',
-              bgcolorclass,
-              textcolorclass,
-              type]">
-
-      <div id="body" :class="[type !== 'photos' ? '' : 'ph7-1 f3-ns mr3-l']">
-        <!-- <ol
-          v-if="toc.length > 1"
-          class="f6 list ma2 mh3-l fl-l pv3 ph1 ba-ns b--gray mw5 o-60">
-          <li class="ph1 ph3-ns mv2 lh-solid b"
-            v-for="(t, i) in toc">
-
-            <span class="gray mr1 sans-serif">
-              {{i+1}}
-            </span>
-            <a
-              class="link black underline"
-              :href="t.slug">{{t.text}}</a>
-          </li>
-        </ol> -->
-
+    :class="['w-100 mb0 pa1 pa3-ns']">
+      <div id="body" :class="['ph7-1 mr3-l']">
         <Words v-if="body" :bodyMarkdown="body" />
       </div>
     </section>
