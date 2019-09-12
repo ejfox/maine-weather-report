@@ -2,7 +2,7 @@
 <div class="slug-container cf pa5-l">
   <article id="post-container w-100 fl">
     <!-- Article header -->
-    <header class="w-100">
+    <header class="w-100 bb bt pv4">
       <div class="w-100 pa3">
         <h1 :class="['f1 f-subheadline-ns sans-serif-flyweight lh-solid mv3']">
           {{ title }}
@@ -10,7 +10,7 @@
       </div>
 
       <div v-if="dek">
-        <div class="f3 f2-ns mv3 mv5-ns i b ph3 w-100 db lh-title">{{dek}}</div>
+        <div class="f3 f2-ns mv3 mv4-ns i b ph3 w-100 db lh-title">{{dek}}</div>
       </div>
 
       <!-- Timestamp -->
@@ -21,8 +21,8 @@
     </header>
 
     <section
-    :class="['w-100 mb0 mt3 ph3 ph0-l']">
-      <div id="body" class="pa2 pa3-ns pt5-l tj">
+    :class="['w-100 mt4 ph3 ph0-l']">
+      <div id="body" class="pa2 pa3-ns tj">
         <Words v-if="body" :bodyMarkdown="body" />
       </div>
     </section>
@@ -48,7 +48,8 @@ export default {
   },
   data: function () {
     return {
-      emojiIcon: '📓'
+      emojiIcon: '📓',
+      hideTimestamp: false
     }
   },
   computed: {
