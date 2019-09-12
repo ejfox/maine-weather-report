@@ -146,4 +146,16 @@ hr {
 p {
   margin-bottom: 1.5em;
 }
+
+.drop-cap:first-child:first-letter {
+  color: black;
+  initial-letter: 3 2;
+  font-size: 2.5em;
+  font-weight: bold;
+  padding: 0.2em 0.4em;
+  margin-right: 0.15em;
+  /* border: 1px solid black; */
+  background: white;
+  border-radius: 100%;
+}
 </style>

@@ -6,15 +6,13 @@
     <li class="ph3-ns"><nuxt-link class="link sans-serif silver tracked f3" to="/">MWR</nuxt-link></li>
 
     <!-- <li class="pr2 ph3-ns"><nuxt-link class="link underline blue" to="/projects">Projects</nuxt-link></li> -->
+
+
   </ul>
 </template>
 
 <script scoped>
 export default {
-  data: function () {
-    return {
-    }
-  },
   methods: {
   },
   mounted: function() {

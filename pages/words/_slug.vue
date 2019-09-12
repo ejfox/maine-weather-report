@@ -24,16 +24,20 @@
     :class="['w-100 mt4 ph3 ph0-l']">
       <div id="body" class="pa2 pa3-ns tj">
         <Words v-if="body" :bodyMarkdown="body" />
+        <h4 class="gray">Russell Zintel</h4>
       </div>
     </section>
 
   </article>
+
+  <BottomNav :slug="slug" />
 </div>
 </template>
 
 <script>
 import Words from '~/components/blogtypes/words.vue'
 import Nav from '~/components/Nav.vue';
+import BottomNav from '~/components/BottomNav.vue';
 import URL from 'url-parse'
 // import _ from 'lodash'
 import marked from 'marked'
@@ -44,7 +48,8 @@ export default {
   scrollToTop: true,
   components: {
     Words,
-    Nav
+    Nav,
+    BottomNav
   },
   data: function () {
     return {
@@ -77,6 +82,7 @@ export default {
     if(!post.audio) { post.audio = null }
     if(!post.inprogress) { post.inprogress = null }
     if(!post.dek) { post.dek = null }
+    post.slug = params.slug
 
     // let toc = marked.lexer(post.body)
     // // console.log(post.body, toc)
