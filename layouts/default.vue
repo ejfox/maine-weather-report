@@ -32,15 +32,18 @@ export default {
   box-sizing: border-box;
   margin: 0;
 }
-
+/* 
 .bg-green {
   background-color: #8AA445 !important;
 }
 
 .green {
   color: #8AA445 !important;
-}
+} */
 
+.word-wrap {
+  word-wrap: break-word;
+}
 html {
   font-size: 16px;
   font-size: 1.3em;
@@ -54,8 +57,8 @@ html {
 }
 body {
   scroll-behavior: smooth;
-  background-color: #FDFAD9;
-  border-top: 2em solid #8AA445;
+  /* background-color: #FDFAD9; */
+  /* border-top: 2em solid #8AA445; */
 }
 
 a,a:link,a:visited,a:active {

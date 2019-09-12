@@ -2,27 +2,27 @@
 <div class="slug-container cf pa5-l">
   <article id="post-container w-100 fl">
     <!-- Article header -->
-    <header class="ph3-ns w-100">
-      <div class="ph2 ph3-ns">
-        <h1 :class="['f1 f-subheadline-ns sans-serif-flyweight lh-solid mv0 mv1-ns']">
+    <header class="w-100">
+      <div class="w-100 pa3">
+        <h1 :class="['f1 f-subheadline-ns sans-serif-flyweight lh-solid mv3']">
           {{ title }}
         </h1>
       </div>
 
       <div v-if="dek">
-        <div class="mv3 i b mh3 pa3-ns w-100 db">{{dek}}</div>
+        <div class="f3 f2-ns mv3 mv5-ns i b ph3 w-100 db lh-title">{{dek}}</div>
       </div>
 
       <!-- Timestamp -->
       <time v-if="!hidetimestamp"
-        :class="['f5 w-100 sans-serif mb2 pl0 pb0 db ttu tracked dark-gray']">
-        <small class="ma3 pa3-ns w-100 db">{{ date | moment("MMMM Do, YYYY") }}</small>
+        :class="['f6 f5-ns w-100 sans-serif ttu tracked gray dark-gray-ns']">
+        <small class="w-100 db ph3 ph3-ns">{{ date | moment("MMMM Do, YYYY") }}</small>
       </time>
     </header>
 
     <section
-    :class="['w-100 mb0 pa1 pa4-l']">
-      <div id="body" class="ph2">
+    :class="['w-100 mb0 mt3 ph3 ph0-l']">
+      <div id="body" class="pa2 pa3-ns pt5-l tj">
         <Words v-if="body" :bodyMarkdown="body" />
       </div>
     </section>

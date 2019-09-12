@@ -2,12 +2,12 @@
   <div class="">
     <div
       v-if="bodyHtml"
-      class="words contentWrapper content measure lh-copy" v-html="bodyHtml">
+      class="words contentWrapper content measure lh-copy near-black" v-html="bodyHtml">
     </div>
 
     <div
       v-if="!bodyHtml"
-      class="words contentWrapper content measure"
+      class="words contentWrapper content measure tj"
       v-html="bodyMarkdown">
     </div>
   </div>
