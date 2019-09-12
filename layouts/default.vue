@@ -100,15 +100,13 @@ pre {
 
 .sans-serif {
   /* font-display: fallback; */
-  font-display: none;
   font-family: "Idlewild A", "Idlewild B", "Helvetica Neue", Helvetica,sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .serif {
   /* font-display: fallback; */
-  font-display: none;
   font-family: "Quarto A", "Quarto B", "Georgia", serif;
 }
 

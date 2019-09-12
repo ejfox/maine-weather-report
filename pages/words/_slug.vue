@@ -4,25 +4,25 @@
     <!-- Article header -->
     <header class="ph3-ns w-100">
       <div class="ph2 ph3-ns">
-        <h1 :class="['f-subheadline sans-serif-flyweight lh-solid mv0 mv1-ns', (type === 'photos') || (type === 'audio') ? 'tc' : '']">
+        <h1 :class="['f1 f-subheadline-ns sans-serif-flyweight lh-solid mv0 mv1-ns']">
           {{ title }}
         </h1>
       </div>
 
       <div v-if="dek">
-        <div class="mv3 i b pa3-ns tc tl-ns w-100 db">{{dek}}</div>
+        <div class="mv3 i b mh3 pa3-ns w-100 db">{{dek}}</div>
       </div>
 
       <!-- Timestamp -->
       <time v-if="!hidetimestamp"
-        :class="['f4 w-100 sans-serif mb2 pl0 pb0 db ttu tracked o-50']">
-        <small class="mv3 pa3-ns tc tl-ns w-100 db">{{ date | moment("MMMM Do, YYYY") }}</small>
+        :class="['f5 w-100 sans-serif mb2 pl0 pb0 db ttu tracked dark-gray']">
+        <small class="ma3 pa3-ns w-100 db">{{ date | moment("MMMM Do, YYYY") }}</small>
       </time>
     </header>
 
     <section
-    :class="['w-100 mb0 pa1 pa3-ns']">
-      <div id="body" :class="['ph7-1 mr3-l']">
+    :class="['w-100 mb0 pa1 pa4-l']">
+      <div id="body" class="ph2">
         <Words v-if="body" :bodyMarkdown="body" />
       </div>
     </section>
@@ -69,7 +69,7 @@ export default {
     }
   },
   async asyncData({ params }) {
-    let post = await import('~/content/blog/posts/' + params.slug + '.json');
+    let post = await import('~/content/words/posts/' + params.slug + '.json');
     if(!post.body && post.bodyContent) { post.body = post.bodyContent }
     if(!post.bgcolorclass) { post.bgcolorclass = ''}
     if(!post.textcolorclass) { post.textcolorclass = '' }

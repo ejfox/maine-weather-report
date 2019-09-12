@@ -12,9 +12,9 @@ media_library:
   config:
     publicKey: ac78278cad46e4c5e923
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/blog/posts" # The path to the folder where the documents are stored
+  - name: "words" # Used in routes, e.g., /admin/collections/blog
+    label: "Words" # Used in the UI
+    folder: "content/words/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'json'

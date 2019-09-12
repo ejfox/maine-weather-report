@@ -1,5 +1,5 @@
 <template>
-  <section class="w-80 center db f3 cf mb4">
+  <section class="w-80 center db f3 cf mb4 serif">
 
     <h1 class="lh-title f1 green sans-serif tc">Maine Weather Report</h1>
 
@@ -34,11 +34,11 @@ export default {
   },
   data() {
     // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/);
+    const context = require.context('~/content/words/posts/', false, /\.json$/);
 
     let posts = context.keys().map(key => ({
       ...context(key),
-      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
+      _path: `/words/${key.replace('.json', '').replace('./', '')}`
     }));
 
 
