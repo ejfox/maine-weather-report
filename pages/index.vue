@@ -21,6 +21,10 @@
       </ul>
     </section>
 
+    <section>
+      <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+      <div class="gumroad-product-embed" data-gumroad-product-id="mwr-01"><a href="https://gumroad.com/l/mwr-01">Loading...</a></div>
+    </section>
     <h3 class="mv5 f1 word-wrap">Submissions: <strong class="green">ejfox@ejfox.com</strong></h3>
   </section>
 </template>
