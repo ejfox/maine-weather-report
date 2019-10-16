@@ -2,7 +2,12 @@
   <section class="w-80 center db f3 cf mb4 serif">
     <h1 class="lh-title f1 f-headline-l green serif tc mt1">Maine Weather Report</h1>
 
-    <h2 class="lh-title f2 f1 gray tracked-ns serif tc">Summer 2019 • Issue 1</h2>
+    <section>
+      <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+      <div class="gumroad-product-embed" data-gumroad-product-id="mwr-01"><a href="https://gumroad.com/l/mwr-01">Buy a print copy...</a></div>
+    </section>
+
+    <!-- <h2 class="lh-title f2 f1 gray tracked-ns serif tc">Summer 2019 • Issue 1 Preview</h2> -->
     <section id="allposts" class="category pv4 db cf">
       <!-- <h2 class="fl f1 pl2 db mr4 lh-title">All posts</h2> -->
       <ul class="db f5 list">
@@ -19,11 +24,6 @@
           </span>
         </li>
       </ul>
-    </section>
-
-    <section>
-      <script src="https://gumroad.com/js/gumroad-embed.js"></script>
-      <div class="gumroad-product-embed" data-gumroad-product-id="mwr-01"><a href="https://gumroad.com/l/mwr-01">Loading...</a></div>
     </section>
     <h3 class="mv5 f1 word-wrap">Submissions: <strong class="green">ejfox@ejfox.com</strong></h3>
   </section>
